@@ -285,15 +285,20 @@ def get_frontier_params(node, frontier):
     return False, None, None, None
 
 
-
-
-def get_geographical_heuristic(x1,x2,y1,y2):
-    a= int(x2-x1)
-    b= int(y2-y1)
-    c= a*a + b*b
-    d= math.sqrt(c)
+def get_geographical_heuristic(node, goal):
+    i, j = divmod(int(node), 8)
+    i_goal, j_goal = divmod(int(goal), 8)
+    i_delta = pow((i - i_goal),2)
+    j_delta = pow((i - i_goal),2)
     
-    return d
+    geo_dist = math.sqrt((i_delta)+(j_delta))
+    return geo_dist
+
+
+
+
+    
+    
     
     
     
@@ -309,7 +314,7 @@ if __name__ == '__main__':
     # print()
 
     print("============ AStar Search ================")
-    path_astar, explored_astar = astar_search(graph_neighbours, '0', '27')
+    path_astar, explored_astar = astar_search(graph_neighbours, '0', '61')
     print("Path_astar:", path_astar)
     print("Explored Nodes A Star: ", explored_astar)
     print(len(explored_astar))
