@@ -158,3 +158,4 @@ And it is also worth mentioning that many games and web-based maps use this algo
 
 The code used in this article and the complete working example can be found the git repository below:
 [https://github.com/fakemonk1/AI-Search-Algorithms-Implementations](https://github.com/fakemonk1/AI-Search-Algorithms-Implementations)#19miy0004
+# 19MIY0004_AI
